@@ -11,9 +11,9 @@ title                    : "brock chapin"
 title_separator          : "-"
 name                     : "brock chapin"
 description              : "an IT Ops blog"
-url                      : "https://brizzock.github.io"# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://bchap1n.github.io"# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "brizzock/brizzock.github.io"# GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "bchap1n/bchap1n.github.io"# GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : /assets/images/brocade-giants-brock-scoreboard.jpg # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -81,7 +81,7 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "i like coffee and powershell"
   location         : "Felton, CA"
-  email            : "brockchapin@gmail.com"
+  email            : "brockchapin@live.com"
   uri              :
   bitbucket        :
   codepen          :
