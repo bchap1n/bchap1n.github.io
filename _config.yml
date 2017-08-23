@@ -9,7 +9,7 @@
 locale                   : "en"
 title                    : "brock chapin"
 title_separator          : "-"
-name                     : "brock chapin"
+name                     : ""
 description              : "an IT Ops blog"
 url                      : "https://bchap1n.github.io"# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -20,7 +20,7 @@ words_per_minute         : 200
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
-    shortname            : brizzock # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : bchap1n-github-io # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -77,8 +77,8 @@ analytics:
 
 # Site Author
 author:
-  name             : "brock chapin"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  name             : ""
+  avatar           : "/assets/images/memes/rejectedgirlydesign.gif.jpg"
   bio              : "i like coffee and powershell"
   location         : "Felton, CA"
   email            : "brockchapin@live.com"
@@ -89,18 +89,18 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : "brizzock"
   google_plus      :
   keybase          :
-  instagram        :
+  instagram        : "briznock/"
   lastfm           :
-  linkedin         :
+  linkedin         : "brockchapin/"
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
   steam            :
   tumblr           :
-  twitter          :
+  twitter          : "bchap1n"
   vine             :
   weibo            :
   xing             :
@@ -172,7 +172,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 9 # amount of posts to show
 paginate_path: /page:num/
 timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 

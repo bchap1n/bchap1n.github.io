@@ -1,12 +1,12 @@
 # main links
 main:
-  - title: "blog"
-    url: /blog/
-  - title: "About"
+ # - title: "blog"
+ #   url: /blog/
+  - title: "about"
     url: /about/
-  - title: "CV"
-    url: /CV/
-  - title: "Links"
+  - title: "resume"
+    url: /resume/Brock Chapin_resume 2017-s.pdf
+  - title: "links"
     url: /links/
   # - title: "Sample Collections"
   #   url: /collection-archive/
