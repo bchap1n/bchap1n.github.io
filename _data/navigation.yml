@@ -3,11 +3,11 @@ main:
  # - title: "blog"
  #   url: /blog/
   - title: "about"
-    url: /about/
+    url: /about/about/
   - title: "resume"
-    url: /resume/Brock Chapin_resume 2017-s.pdf
-  - title: "links"
-    url: /links/
+    url: /resume/Brock Chapin_resume 2017-Q2.pdf
+  # - title: "links"
+  #   url: /links/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
