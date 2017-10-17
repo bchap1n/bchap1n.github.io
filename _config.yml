@@ -11,7 +11,7 @@ title                    : "brock chapin"
 title_separator          : "-"
 name                     : ""
 description              : "an IT Ops blog"
-url                      : "https://bchap1n.github.io"# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://bchap1n.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "bchap1n/bchap1n.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : /assets/images/brocade-giants-brock-scoreboard.jpg # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -80,7 +80,7 @@ author:
   name             : ""
   avatar           : "/assets/images/memes/rejectedgirlydesign.gif.jpg"
   bio              : "personal journal of my homelab or other IT projects"
-  location         : "[Silicon Valley, California]:https://www.google.com/maps/place/Silicon+Valley,+CA/@37.4024713,-122.3219823,10z/data=!3m1!4b1!4m5!3m4!1s0x808fb68ad0cfc739:0x7eb356b66bd4b50e!8m2!3d37.387474!4d-122.0575434"
+  location         : "San Francisco Bay Area" #"https://goo.gl/maps/fSnG3xHD7z32"
   email            : "brockchapin@live.com"
   uri              :
   bitbucket        :
