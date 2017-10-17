@@ -79,8 +79,8 @@ analytics:
 author:
   name             : ""
   avatar           : "/assets/images/memes/rejectedgirlydesign.gif.jpg"
-  bio              : "i like coffee and powershell"
-  location         : "Felton, CA"
+  bio              : "personal journal of my homelab or other IT projects"
+  location         : "[Silicon Valley, California]:https://www.google.com/maps/place/Silicon+Valley,+CA/@37.4024713,-122.3219823,10z/data=!3m1!4b1!4m5!3m4!1s0x808fb68ad0cfc739:0x7eb356b66bd4b50e!8m2!3d37.387474!4d-122.0575434"
   email            : "brockchapin@live.com"
   uri              :
   bitbucket        :
@@ -89,7 +89,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "brizzock"
+  github           : "bchap1n"
   google_plus      :
   keybase          :
   instagram        : "briznock/"
