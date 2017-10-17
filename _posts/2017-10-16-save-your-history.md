@@ -2,8 +2,8 @@
 layout: single
 title:  "making better use of powershell history"
 categories: powershell
-tags: [profile, get-history ]
-excerpt: "I often need a little help remembering "
+tags: [profile, get-history, function ]
+excerpt: " function save-cmd { (get-history | Select-Object -Last 1).commandline | out-file -FilePath $scmd -Append -NoClobber -Force } "
 comments: false
 date:   2017-10-17 11:11:01 -0800
 modified: 2015-10-17
