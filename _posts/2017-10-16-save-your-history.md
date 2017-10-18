@@ -5,8 +5,8 @@ categories: powershell
 tags: [profile, get-history, function, "100" ]
 excerpt: " function save-cmd { (get-history | Select-Object -Last 1).commandline | out-file -FilePath $scmd -Append -NoClobber -Force } "
 comments: false
-date:   2017-10-17 11:11:01 -0800
-modified: 2015-10-17
+date:   2017-10-17 11:11:01
+modified: 2017-10-17 22:02:45
 
 
 ---
@@ -15,7 +15,6 @@ The native powershell `Get-History` cmdlet only gives items from the open consol
 
 ### function hist
 I added this to my powershell profile to make using `Console_history.txt' more fun:
-
 {% highlight powershell linenos %}
 $history = "~\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt" 
 function hist {get-content $history -tail 512}
@@ -33,24 +32,21 @@ function save-cmd { (get-history | Select-Object -Last 1).commandline | out-file
 {% endhighlight %}
 
 The command below will add the last item in your history to your `$Profile`
-
 {% highlight powershell linenos %}
 (get-history | Select-Object -Last 1).commandline | out-file -FilePath $profile -Append -Force -NoClobber -Encoding utf8 ; & $Profile
 {% endhighlight %}
 
 
 ### go deeper
-I wonder what I will find if I search the PSGallery for items related to "history"?
+What will I find if I search the PSGallery for items related to "history"?
 {% highlight powershell linenos %}
 Find-Script *history* | Select-Object name, Author, CompanyName,description
-
 Name                   Author         CompanyName Description
 ----                   ------         ----------- -----------
 Invoke-SelectedHistory Jeffrey Snover jsnover     Show the command line history and Invoke the selected items
 {% endhighlight %}
-whoah... written by Mr. Monad Manifesto!
 
-
+written by Mr. Monad Manifesto!
 {% highlight powershell linenos %}
 Find-Script *history* | Save-Script -Path . -Force
 cat .\Invoke-SelectedHistory.ps1
@@ -66,7 +62,7 @@ cat .\Invoke-SelectedHistory.ps1
 .EXAMPLE
    PS> ISH -count 200 -verbose
 {% endhighlight %}
-this may be my favorite alias of all time!:  `ISH`
+pretty neat alias in that script:  `ISH`
 
 ### lessons learned..
 I should have searched PSGallery earlier. I think I'll modify this script so that instead of pulling from Get-History, it pulls from a csv which will contain my `Save-Cmd` output. I'll have to also modify `Save-Cmd` function so that it stores the object output of `get-history` instead of just the command line. Then i can make use of the gui and `invoke-command` feature in jsnover's script to work as a cool launcher for saved one-liners.
