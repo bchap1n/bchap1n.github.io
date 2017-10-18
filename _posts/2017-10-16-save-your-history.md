@@ -14,14 +14,14 @@ modified: 2015-10-17
 The native powershell `Get-History` cmdlet only gives items from the open console and all history is lost when you close the console. Similar to `.bash_history` in Linux, the command line property from the `Get-History` output are also written to a file called `Console_history.txt`, which is ueful as a more persistant history.
 
 ### function hist
-Here are a few elements I have added to my powershell profile to make using `Console_history.txt' more fun:
+I added this to my powershell profile to make using `Console_history.txt' more fun:
 
 {% highlight powershell linenos %}
 $history = "~\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt" 
 function hist {get-content $history -tail 512}
 {% endhighlight %}
 
-the `hist` function gives me quick access to the contents of my `Console_history.txt` and I use it a lot!
+the `hist` function gives me quick access to the contents of my `Console_history.txt`
 
 ### function save-cmd
 Often I want to save the command I have just run for later use, but I don't want to leave the console and break my concentration. I added `save-cmd` function my $Profile to pull the last item in my history, and save it to a file in my personal powershell repo. 
@@ -32,7 +32,7 @@ function shist {Get-Content $shist}
 function save-cmd { (get-history | Select-Object -Last 1).commandline | out-file -FilePath $hist -Append -NoClobber -Force }
 {% endhighlight %}
 
-Tthe command below will add the last item in your history to your `$Profile`
+The command below will add the last item in your history to your `$Profile`
 
 {% highlight powershell linenos %}
 (get-history | Select-Object -Last 1).commandline | out-file -FilePath $profile -Append -Force -NoClobber -Encoding utf8 ; & $Profile
