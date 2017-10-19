@@ -2,7 +2,7 @@
 layout: single
 title:  "making better use of powershell history"
 categories: powershell
-tags: [profile, get-history, function, "100" ]
+tags: [profile, function, "100" ]
 excerpt: " Often I want to save the command I have just run for later use, but I don't want to leave the console and break my concentration. I added `save-cmd` function my $Profile to pull the last item in my history, and save it to a file in my personal powershell repo. "
 comments: false
 date:   2017-10-17 11:11:01
