@@ -2,19 +2,19 @@
 layout: single
 title:  "making better use of powershell history"
 categories: powershell
-tags: [profile, function, "100" ]
+tags: [$profile, function, "100" ]
 excerpt: " Often I want to save the command I have just run for later use, but I don't want to leave the console and break my concentration. I added `save-cmd` function my $Profile to pull the last item in my history, and save it to a file in my personal powershell repo. "
 comments: false
 date:   2017-10-17 11:11:01
-modified: 2017-10-17 22:02:45
+modified: 2017-10-20 13:41:58
 
 
 ---
 # ![a screenshot]({{ site.url }}/assets/images/vscode-powershell-circle.png)
-The native powershell `Get-History` cmdlet only gives items from the open console and all history is lost when you close the console. Similar to `.bash_history` in Linux, the command line property from the `Get-History` output are also written to a file called `Console_history.txt`, which is ueful as a more persistant history.
+The native powershell `Get-History` cmdlet returns results from the open console only and this history is lost when you close that console. But similarly to `.bash_history` in Linux, the command line property from the `Get-History` output are also written to a file called `Console_history.txt`, which is useful as a more persistent history.
 
 ### function hist
-I added this to my powershell profile to make using `Console_history.txt' more fun:
+I added this to my powershell profile to make using `Console_history.txt` more fun:
 {% highlight powershell linenos %}
 $history = "~\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt" 
 function hist {get-content $history -tail 512}
@@ -23,7 +23,7 @@ function hist {get-content $history -tail 512}
 the `hist` function gives me quick access to the contents of my `Console_history.txt`
 
 ### function save-cmd
-Often I want to save the command I have just run for later use, but I don't want to leave the console and break my concentration. I added `save-cmd` function my $Profile to pull the last item in my history, and save it to a file in my personal powershell repo. 
+Often I want to save the command I have just run for later use, but I don't want to leave the console and break my concentration. I added `save-cmd` function my $Profile to pull the last item in my history, and save it to a file in my personal powershell repo. I can retrieve the content of this file with the `shist` function.
 
 {% highlight powershell linenos %}
 $shist = "~\Documents\GitLab\powershell\consolehistory_saved.txt"
@@ -65,4 +65,4 @@ cat .\Invoke-SelectedHistory.ps1
 pretty neat alias in that script:  `ISH`
 
 ### lessons learned..
-I should have searched PSGallery earlier. I think I'll modify this script so that instead of pulling from Get-History, it pulls from a csv which will contain my `Save-Cmd` output. I'll have to also modify `Save-Cmd` function so that it stores the object output of `get-history` instead of just the command line. Then i can make use of the gui and `invoke-command` feature in jsnover's script to work as a cool launcher for saved one-liners.
+I should have searched PSGallery earlier. I plan to modify this script so that instead of pulling from Get-History, it pulls from a csv which will contain my `Save-Cmd` output. I'll have to also modify my `Save-Cmd` function so that it stores the object output of `get-history` instead of just the command line. Then i can make use of the gui and `invoke-command` feature in jsnover's script to work as a cool launcher for saved one-liners.

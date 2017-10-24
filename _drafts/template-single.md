@@ -24,6 +24,26 @@ get-itemproperty $var
 ## your face
 {% endhighlight %}
 
+*emphasis*
+
+**bold text**
+
+**_bold and italics_**
+
+_stress or italics?_
+
+__alternate voice__
+
+favorite book is [??The Count of Monte Cristo??]
+
+The news networks declared -Al Gore- +George W. Bush+ the winner in Florida.
+
+**Textile**:
+
+h4. ["**Textile** (markup language) - Wikipedia":http://en.wikipedia.org/wiki/Textile_(markup_language)]
+
+**Textile** is a lightweight markup language originally developed by Dean Allen and billed as a "humane Web text generator".  **Textile** converts its marked-up text ...
+
 
 # ![a screenshot]({{ site.url }}/assets/images/brocade-giants-brock-scoreboard-edit.jpg)
 
