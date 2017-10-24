@@ -15,39 +15,39 @@ The native powershell `Get-History` cmdlet returns results from the open console
 
 ### function hist
 I added this to my powershell profile to make using `Console_history.txt` more fun:
-{% highlight powershell linenos %}
+{% highlight powershell %}
 $history = "~\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt" 
 function hist {get-content $history -tail 512}
 {% endhighlight %}
-
+<br>
 the `hist` function gives me quick access to the contents of my `Console_history.txt`
 
 ### function save-cmd
 Often I want to save the command I have just run for later use, but I don't want to leave the console and break my concentration. I added `save-cmd` function my $Profile to pull the last item in my history, and save it to a file in my personal powershell repo. I can retrieve the content of this file with the `shist` function.
 
-{% highlight powershell linenos %}
+{% highlight powershell %}
 $shist = "~\Documents\GitLab\powershell\consolehistory_saved.txt"
 function shist {Get-Content $shist}
 function save-cmd { (get-history | Select-Object -Last 1).commandline | out-file -FilePath $hist -Append -NoClobber -Force }
 {% endhighlight %}
-
+<br>
 The command below will add the last item in your history to your `$Profile`
-{% highlight powershell linenos %}
+{% highlight powershell %}
 (get-history | Select-Object -Last 1).commandline | out-file -FilePath $profile -Append -Force -NoClobber -Encoding utf8 ; & $Profile
 {% endhighlight %}
 
 
 ### go deeper
 What will I find if I search the PSGallery for items related to "history"?
-{% highlight powershell linenos %}
+{% highlight powershell %}
 Find-Script *history* | Select-Object name, Author, CompanyName,description
 Name                   Author         CompanyName Description
 ----                   ------         ----------- -----------
 Invoke-SelectedHistory Jeffrey Snover jsnover     Show the command line history and Invoke the selected items
 {% endhighlight %}
-
-written by Mr. Monad Manifesto!
-{% highlight powershell linenos %}
+<br>
+written by **Mr. Monad Manifesto**!
+{% highlight powershell %}
 Find-Script *history* | Save-Script -Path . -Force
 cat .\Invoke-SelectedHistory.ps1
 
